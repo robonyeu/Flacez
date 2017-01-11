@@ -1,0 +1,6 @@
+framework module Pods_ForMonzTests {
+  umbrella header "Pods-ForMonzTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
