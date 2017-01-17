@@ -47,7 +47,6 @@ class MerchantsViewController: UIViewController, UITableViewDataSource, UITableV
         return cell!
     }
 
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let merchant = merchants[indexPath.row]
         

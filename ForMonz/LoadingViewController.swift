@@ -26,8 +26,8 @@ class LoadingViewController: UIViewController {
         
         var headers: HTTPHeaders = [:]
         
-        let accessToken = "XXXX" // get users access Token
-        let usersAccount = "acc_XXXX"
+        let accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjaSI6Im9hdXRoY2xpZW50XzAwMDA5NFB2SU5ER3pUM2s2dHo4anAiLCJleHAiOjE0ODQ2NzE0NDEsImlhdCI6MTQ4NDY0OTg0MSwianRpIjoidG9rXzAwMDA5R1R1TDRFbEVRa0poQ3hJRUQiLCJ1aSI6InVzZXJfMDAwMDkyaUk1ZURTQUpLaTZ2eUtSdCIsInYiOiIyIn0.UdSD4_GsEi8xzMavUyDiTJPCWefjTX4c1bagsmcHpiw" // get users access Token
+        let usersAccount = "acc_000092iI5eLbg0Fc41xkpt"
         let url = "https://api.monzo.com/transactions?expand[]=merchant&account_id=" + usersAccount
         
         headers["Authorization"] = "Bearer \(accessToken)"

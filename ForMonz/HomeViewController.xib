@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="ForMonz" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="k6l-r9-7CE" id="5p8-Gg-XJ5"/>
                 <outlet property="view" destination="iN0-l3-epB" id="874-0h-OLF"/>
             </connections>
         </placeholder>
