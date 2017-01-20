@@ -126,16 +126,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       // let range: Range<String.Index> = orderedTags[indexPath.row].range(of: "#")!
-       // let key = orderedTags[indexPath.row].substring(from: range.upperBound)
-        //searchVenueWithQuery(query: key)
+
         let venue:Venue = similarVenues[indexPath.row]
         
         if let name = venue.location?["formattedAddress"] as? Array<String> {
             print(name)
         }
      
-        
+        let venuesMapVC: VenuesMapViewController = VenuesMapViewController()
+        venuesMapVC.similarVenues = similarVenues
+        self.navigationController?.pushViewController(venuesMapVC, animated: true)
+    
     }
     
     
