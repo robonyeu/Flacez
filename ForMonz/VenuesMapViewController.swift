@@ -27,8 +27,7 @@ class VenuesMapViewController: UIViewController, CLLocationManagerDelegate, MKMa
         locationManager.startUpdatingLocation()
 
         let regionRadius: CLLocationDistance = 1000
-        
-
+    
         func centerMapOnLocation(location: CLLocation) {
             let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                       regionRadius * 2.0, regionRadius * 2.0)
@@ -46,7 +45,7 @@ class VenuesMapViewController: UIViewController, CLLocationManagerDelegate, MKMa
         
         for venue: Venue in similarVenues{
             
-            let annotation: VenueAnnotation = VenueAnnotation(title: venue.name!, locationName: "", coordinate: (locationManager.location?.coordinate)!);
+            let annotation: VenueAnnotation = VenueAnnotation(title: venue.name!, locationName: "", coordinate: (locationManager.location?.coordinate)!, venue: venue);
             
             if let formattedAdd = venue.location?["formattedAddress"] as? Array<String> {
                
@@ -72,11 +71,8 @@ class VenuesMapViewController: UIViewController, CLLocationManagerDelegate, MKMa
                 }
             }
            
-            
             map.addAnnotation(annotation)
         }
-        
-        print("User is in \(locationManager)")
     }
     
     override func didReceiveMemoryWarning() {
@@ -85,7 +81,6 @@ class VenuesMapViewController: UIViewController, CLLocationManagerDelegate, MKMa
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("new location \(locations.last)")
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -108,11 +103,22 @@ class VenuesMapViewController: UIViewController, CLLocationManagerDelegate, MKMa
                 view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 view.canShowCallout = true
                 view.calloutOffset = CGPoint(x: -5, y: 5)
+                view.rightCalloutAccessoryView = UIButton.init(type: .detailDisclosure) as! UIView
                // view.rightCalloutAccessoryView = UIButton.viewWithTag(.DetailDisclosure) as! UIView
                 //view.rightCalloutAccessoryView = UIButton.buttonWithType(.DetailDisclos ure) as! UIView
             }
             return view
         }
         return nil
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        
+        if let annotation = view.annotation as? VenueAnnotation{
+            let venuevc: VenueViewController = VenueViewController()
+            venuevc.venue = annotation.venue
+            
+            self.navigationController?.pushViewController(venuevc, animated: true);
+        }
     }
 }

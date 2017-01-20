@@ -32,10 +32,6 @@ class LoadingViewController: UIViewController {
         let url = "https://api.monzo.com/transactions?expand[]=merchant&account_id=" + usersAccount
         
         headers["Authorization"] = "Bearer \(accessToken)"
-       
-        
-    
-        
         
         Alamofire.request(url, headers: headers)
             .responseJSON { response in
@@ -61,9 +57,7 @@ class LoadingViewController: UIViewController {
                         let alert: UIAlertController = UIAlertController(title: "Error", message: messageString, preferredStyle: .alert);
                         self.present(alert, animated: true, completion: nil);
                     }
-                    
                 }
-
         }
  
     }

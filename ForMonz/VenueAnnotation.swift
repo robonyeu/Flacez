@@ -14,12 +14,13 @@ class VenueAnnotation: NSObject, MKAnnotation {
     let title: String?
     var locationName: String
     var coordinate: CLLocationCoordinate2D
+    let venue:Venue
     
-    init(title: String, locationName: String, coordinate: CLLocationCoordinate2D) {
+    init(title: String, locationName: String, coordinate: CLLocationCoordinate2D, venue: Venue) {
         self.title = title
         self.locationName = locationName
         self.coordinate = coordinate
-        
+        self.venue = venue
         super.init()
     }
     

@@ -20,6 +20,7 @@ class Venue: Mappable{
     required init?(map: Map) {
     }
     
+
     func mapping(map: Map) {
         name    <- map["name"]
         id    <- map["id"]
