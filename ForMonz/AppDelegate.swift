@@ -43,6 +43,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         print("I am opening from an url! \(url)")
+        
+        if let parameters = url.query{
+            
+            let coderange: Range<String.Index> = parameters.range(of: "code=")!
+            let staterange: Range<String.Index> = parameters.range(of: "&state=")!
+
+            print (coderange.upperBound)
+            print (coderange.lowerBound)
+
+            let token = parameters.substring(with: coderange.upperBound..<staterange.lowerBound)
+            let state = parameters.substring(from: staterange.upperBound)
+
+            print(token)
+            print(state)
+
+        }
+ 
         return true
     }
 
