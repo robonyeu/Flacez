@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E39D3E81E26AE890049ADCD /* MonzoLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E39D3E71E26AE890049ADCD /* MonzoLoginViewController.swift */; };
 		4E6C91421E153C10004D9FDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C91411E153C10004D9FDA /* AppDelegate.swift */; };
 		4E6C91441E153C10004D9FDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C91431E153C10004D9FDA /* ViewController.swift */; };
 		4E6C91471E153C10004D9FDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E6C91451E153C10004D9FDA /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		2364200362BD74BC820CFBD9 /* Pods_ForMonzTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForMonzTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2609F6395FB39F43DE5CEF2A /* Pods-ForMonz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForMonz.release.xcconfig"; path = "Pods/Target Support Files/Pods-ForMonz/Pods-ForMonz.release.xcconfig"; sourceTree = "<group>"; };
 		2CAEFF0A8EF5BC52C7C712B1 /* Pods-ForMonz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForMonz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ForMonz/Pods-ForMonz.debug.xcconfig"; sourceTree = "<group>"; };
+		4E39D3E71E26AE890049ADCD /* MonzoLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonzoLoginViewController.swift; sourceTree = "<group>"; };
 		4E6C913E1E153C10004D9FDA /* ForMonz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForMonz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E6C91411E153C10004D9FDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E6C91431E153C10004D9FDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 				4E6C91761E155BF4004D9FDA /* HomeViewController.swift */,
 				4E6C916F1E1542D5004D9FDA /* LoadingViewController.swift */,
 				4E6C917C1E155D24004D9FDA /* MerchantsViewController.swift */,
+				4E39D3E71E26AE890049ADCD /* MonzoLoginViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -301,7 +304,7 @@
 				TargetAttributes = {
 					4E6C913D1E153C10004D9FDA = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 57X3DP23YC;
+						DevelopmentTeam = 2XW6734S97;
 						ProvisioningStyle = Automatic;
 					};
 					4E6C91511E153C10004D9FDA = {
@@ -512,6 +515,7 @@
 			files = (
 				4E6C91441E153C10004D9FDA /* ViewController.swift in Sources */,
 				4E6C91421E153C10004D9FDA /* AppDelegate.swift in Sources */,
+				4E39D3E81E26AE890049ADCD /* MonzoLoginViewController.swift in Sources */,
 				4E6C91811E156369004D9FDA /* Metadata.swift in Sources */,
 				4E6C91701E1542D5004D9FDA /* LoadingViewController.swift in Sources */,
 				4E6C91721E154E0F004D9FDA /* Merchant.swift in Sources */,
@@ -671,8 +675,9 @@
 			baseConfigurationReference = 2CAEFF0A8EF5BC52C7C712B1 /* Pods-ForMonz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 57X3DP23YC;
+				DEVELOPMENT_TEAM = 2XW6734S97;
 				INFOPLIST_FILE = ForMonz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JCS.ForMonz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -685,8 +690,9 @@
 			baseConfigurationReference = 2609F6395FB39F43DE5CEF2A /* Pods-ForMonz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 57X3DP23YC;
+				DEVELOPMENT_TEAM = 2XW6734S97;
 				INFOPLIST_FILE = ForMonz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JCS.ForMonz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
